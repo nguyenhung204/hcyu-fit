@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0; 
+  padding: 0; 
+  height: 100%;
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #071224 100%);
+  color: #cbd5e1;
+  overflow-x: hidden;
+}
+
+.header {
+  text-align: center;
+  padding-top: 50px;
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+  animation: fadeInDown 1s ease forwards;
+}
+
+.header img {
+  width: 120px;
+  filter: drop-shadow(0 0 6px #38bdf8);
+}
+
+.header h1 {
+  margin: 20px 0 10px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #a5b4fc;
+  text-shadow: 0 0 4px #a5b4fc88;
+}
+
+#white-tech-particles {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  z-index: -1;
+}
+
+/* --- Group Tổng (Required) Section --- */
+.group-tong-section {
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #334155;
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-tong-title {
+  color: #ef4444;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+  animation: pulseRed 2s ease-in-out infinite;
+}
+
+.group-tong-box {
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+  height: 100px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #7f1d1d, #991b1b);
+  color: #fecaca;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow:
+    0 0 15px #ef444488,
+    inset 0 0 8px #dc262699;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+.group-tong-box:hover {
+  color: #fee2e2;
+  box-shadow:
+    0 0 25px #ef4444cc,
+    0 0 40px #dc2626cc,
+    inset 0 0 12px #b91c1ccc;
+  transform: scale(1.08);
+}
+
+.group-tong-box .description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fca5a5;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* --- Tab Menu CSS --- */
+.tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #334155;
+  margin: 40px auto 40px;
+  width: fit-content;
+}
+
+.tab-btn {
+  padding: 14px 32px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.tab-btn:hover {
+  color: #38bdf8;
+}
+
+.tab-btn.active {
+  color: #38bdf8;
+  border-bottom: 3px solid #38bdf8;
+}
+
+/* --- Link boxes --- */
+.content {
+  padding: 0 20px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.link-box {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 80px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #13283d, #0a1b2b);
+  color: #38bdf8;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 0 12px #0bc3ff88,
+    inset 0 0 6px #1e40af99;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.link-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(5px);
+  animation: shimmer 3s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.link-box:hover {
+  color: #0ea5e9;
+  box-shadow:
+    0 0 18px #0bc3ffcc,
+    0 0 30px #38bdf8cc,
+    inset 0 0 10px #1e40afcc;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* --- Fade in animation for links --- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { left: -70%; }
+  100% { left: 120%; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseRed {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding-top: 30px;
+  }
+  
+  .header img {
+    width: 80px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    margin: 15px 0 8px;
+  }
+  
+  .header p {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .group-tong-section {
+    padding: 20px 15px;
+    margin: 15px auto;
+  }
+  
+  .group-tong-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .group-tong-box {
+    width: 90%;
+    max-width: 320px;
+    height: 90px;
+    font-size: 16px;
+  }
+  
+  .group-tong-box .description {
+    font-size: 11px;
+  }
+
+  .tabs {
+    margin: 30px auto 30px;
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    min-width: 100px;
+  }
+  
+  .tab-btn.active {
+    border-bottom: 3px solid #38bdf8;
+  }
+
+  .content {
+    padding: 0 15px 80px;
+    gap: 30px;
+  }
+  
+  .link-box {
+    width: 100%;
+    max-width: 280px;
+    height: 70px;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Mobile phones (landscape) and small tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header {
+    padding-top: 40px;
+  }
+  
+  .header img {
+    width: 100px;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+    margin: 18px 0 10px;
+  }
+  
+  .header p {
+    font-size: 16px;
+  }
+
+  .group-tong-section {
+    padding: 30px 20px;
+    margin: 18px auto;
+  }
+  
+  .group-tong-title {
+    font-size: 20px;
+  }
+  
+  .group-tong-box {
+    width: 350px;
+    height: 95px;
+    font-size: 17px;
+  }
+
+  .tabs {
+    margin: 35px auto 35px;
+  }
+  
+  .tab-btn {
+    padding: 11px 20px;
+    font-size: 15px;
+  }
+
+  .content {
+    padding: 0 20px 90px;
+    gap: 35px;
+  }
+  
+  .link-box {
+    width: 260px;
+    height: 75px;
+    font-size: 18px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding-top: 45px;
+  }
+  
+  .header img {
+    width: 110px;
+  }
+  
+  .header h1 {
+    font-size: 30px;
+  }
+  
+  .header p {
+    font-size: 17px;
+  }
+
+  .group-tong-section {
+    padding: 35px 25px;
+    margin: 20px auto;
+  }
+  
+  .group-tong-title {
+    font-size: 22px;
+  }
+  
+  .group-tong-box {
+    width: 380px;
+    height: 98px;
+  }
+
+  .content {
+    gap: 40px;
+    padding: 0 25px 95px;
+  }
+  
+  .link-box {
+    width: 270px;
+    height: 78px;
+    font-size: 19px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .header h1 {
+    font-size: 34px;
+  }
+  
+  .header p {
+    font-size: 19px;
+  }
+
+  .group-tong-title {
+    font-size: 26px;
+  }
+  
+  .group-tong-box {
+    width: 420px;
+    height: 105px;
+    font-size: 19px;
+  }
+
+  .content {
+    gap: 45px;
+  }
+  
+  .link-box {
+    width: 290px;
+    height: 82px;
+    font-size: 21px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1441px) {
+  .header {
+    padding-top: 60px;
+  }
+  
+  .header img {
+    width: 140px;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin: 25px 0 12px;
+  }
+  
+  .header p {
+    font-size: 20px;
+  }
+
+  .group-tong-section {
+    padding: 50px 30px;
+    margin: 25px auto;
+    max-width: 700px;
+  }
+  
+  .group-tong-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  
+  .group-tong-box {
+    width: 450px;
+    height: 110px;
+    font-size: 20px;
+  }
+  
+  .group-tong-box .description {
+    font-size: 13px;
+  }
+
+  .tabs {
+    margin: 50px auto 50px;
+  }
+  
+  .tab-btn {
+    padding: 16px 40px;
+    font-size: 20px;
+  }
+
+  .content {
+    gap: 55px;
+    max-width: 1400px;
+  }
+  
+  .link-box {
+    width: 300px;
+    height: 85px;
+    font-size: 22px;
+    letter-spacing: 1.4px;
+  }
+}
+
+/* Orientation specific adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  .header {
+    padding-top: 20px;
+  }
+  
+  .header h1 {
+    margin: 10px 0 5px;
+  }
+  
+  .group-tong-section {
+    padding: 20px;
+    margin: 10px auto;
+  }
+  
+  .tabs {
+    margin: 20px auto 20px;
+  }
+  
+  .content {
+    padding: 0 20px 60px;
+  }
+}
