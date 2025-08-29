@@ -9,7 +9,8 @@ const daiTraLinks = [
   { label: "DHTH21D", url: "https://zalo.me/g/kssokm054" },
   { label: "DHTH21E", url: "https://zalo.me/g/vryagw074" },
   { label: "DHTH21F", url: "https://zalo.me/g/dxebwx890" },
-  { label: "DHTH21G", url: "https://zalo.me/g/heqolc954" }
+  { label: "DHTH21G", url: "https://zalo.me/g/heqolc954" },
+  { label: "DHTH21H", url: "https://zalo.me/g/pjbnhb789" }
 
 ];
 
@@ -20,7 +21,8 @@ const daiTraCLCLinks = [
   { label: "DHTH21D_TCTA", url: "https://zalo.me/g/xlhuqu886" },
   { label: "DHTH21E_TCTA", url: "https://zalo.me/g/lzamwb482" },
   { label: "DHTH21F_TCTA", url: "https://zalo.me/g/zwmryr119" },
-  { label: "DHTH21G_TCTA", url: "https://zalo.me/g/twkrrj290" }
+  { label: "DHTH21G_TCTA", url: "https://zalo.me/g/twkrrj290" },
+  { label: "DHTH21H_TCTA", url: "https://zalo.me/g/nesqjh343" }
 ];
 
 const groupTongLinks = [
