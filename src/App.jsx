@@ -3,13 +3,13 @@ import "./App.css";
 import ChatBox from "./components/icon/ChatBox";
 
 const daiTraLinks = [
-  { label: "DHTH20A", url: "https://zalo.me/g/srklfp129" },
-  { label: "DHTH20B", url: "https://zalo.me/g/zxdpve593" },
-  { label: "DHTH20C", url: "https://zalo.me/g/zbdjun514" },
-  { label: "DHTH20D", url: "https://zalo.me/g/kssokm054" },
-  { label: "DHTH20E", url: "https://zalo.me/g/vryagw074" },
-  { label: "DHTH20F", url: "https://zalo.me/g/dxebwx890" },
-  { label: "DHTH20G", url: "https://zalo.me/g/heqolc954" }
+  { label: "DHTH21A", url: "https://zalo.me/g/srklfp129" },
+  { label: "DHTH21B", url: "https://zalo.me/g/zxdpve593" },
+  { label: "DHTH21C", url: "https://zalo.me/g/zbdjun514" },
+  { label: "DHTH21D", url: "https://zalo.me/g/kssokm054" },
+  { label: "DHTH21E", url: "https://zalo.me/g/vryagw074" },
+  { label: "DHTH21F", url: "https://zalo.me/g/dxebwx890" },
+  { label: "DHTH21G", url: "https://zalo.me/g/heqolc954" }
 
 ];
 
