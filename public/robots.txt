@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hcyu-fit.bancongnghe.tech/sitemap.xml
+
+# Crawl-delay (optional)
+Crawl-delay: 1
+
+# Disallow specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
